@@ -1,0 +1,13 @@
+N=9
+
+alpha = 0.23
+
+nref=8
+nrange=1
+
+U=10
+gamma=2
+
+Ec=0
+n0=6
+
