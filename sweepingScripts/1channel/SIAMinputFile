@@ -1,0 +1,28 @@
+N=6
+nref = 6
+
+nrange = 0
+
+alpha = 0.5
+
+U = 10
+
+epsimp = 0
+
+gamma=0.1
+
+Ec=0
+n0=0
+
+
+include_all_states = 0
+
+get_vectors = 0
+vector_precision = 0.1
+
+get_charge_susceptibility = 1
+how_many_charge_susceptibilities = 20
+charge_susceptibility_cutoff = -1
+
+all_states = 0
+states_per_sector = 20
