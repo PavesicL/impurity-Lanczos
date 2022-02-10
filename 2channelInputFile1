@@ -1,25 +1,27 @@
-N=3
-nref = 3
+N=5
+nref = 5
 
-alpha1 = 0.3
-alpha2 = 0.3
+band_level_shift = 1
 
-U = 100
+alpha1 = -0.4
+alpha2 = -0.4
 
-gamma1 = 0.1
-gamma2 = 0.1
+U = 10
+
+gamma1 = 0.3
+gamma2 = 0.3
 
 nrange=0
 
-Ec1=5.0
-Ec2=5.0
+Ec1=0.0
+Ec2=0.0
 
-n01=0.5
-n02=1.5
+n01=1
+n02=2
 
 print_parity = 0
 
 include_all_sectors = 0
-get_vectors = 5
+get_vectors = 0
 vector_precision = 0.1
 states_per_sector = 20

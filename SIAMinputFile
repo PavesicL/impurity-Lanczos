@@ -1,13 +1,13 @@
 N=5
 nref = 5
 
-nrange = 1
+nrange = 0
 
-alpha = 0.4
+alpha = -0.4
 
-U = 100
+U = 10
 
-gamma = 6.2
+gamma = 0.6
 
 Ec=0
 n0=0

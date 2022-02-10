@@ -657,7 +657,7 @@ def eps(i, D, d, alpha, flat_band, band_level_shift):
 	Dispersion; the spacing between levels is d. This is used to compute the energy for the singly occupied levels.
 	"""
 	if band_level_shift:
-		shift = alpha * d/2
+		shift = -alpha * d/2
 	else:
 		shift = 0	
 
@@ -929,7 +929,7 @@ def SIAM(state, p, basisList, lengthOfBasis):
 	else:
 		charging += 0
 
-	return kinetic + magnetic - p.d*p.alpha*interaction + impurity + p.Ec*charging + p.t*hopping
+	return kinetic + magnetic + p.d*p.alpha*interaction + impurity + p.Ec*charging + p.t*hopping
 
 def SIAM_2channel(state, p, basisList, lengthOfBasis):
 	"""
@@ -1000,7 +1000,8 @@ def SIAM_2channel(state, p, basisList, lengthOfBasis):
 
 		charging2 += nSC2 - 2*p.n02*nSC
 
-	return kinetic + magnetic - 2*p.d*p.alpha1*interaction1 - 2*p.d*p.alpha2*interaction2 + impurity + p.Ec1*charging1 + p.Ec2*charging2
+	return kinetic + magnetic + 2*p.d*p.alpha1*interaction1 + 2*p.d*p.alpha2*interaction2 + impurity + p.Ec1*charging1 + p.Ec2*charging2
+
 
 # MEASUREMENTS ####################################################################################
 
@@ -1101,7 +1102,6 @@ def computeParity(vector, basisList, p):
 
 	return P 
 
-
 def parity_transform_basis(basisList, p):
 	"""
 	The space parity operator in the 2 channel problem is defined as the reflection over the quantum dot level.
@@ -1159,7 +1159,6 @@ def transformBasisVector(m, p):
 
 	return int(newm)
 
-
 def getTransformationPrefactor(m, p):
 	"""
 	Compute the fermionic prefactor by counting the number of necessary swaps of the creation operators in the parity transformation.
@@ -1188,7 +1187,6 @@ def getTransformationPrefactor(m, p):
 	prefactor = (-1) ** (sumL * sumR)
 
 	return prefactor
-
 
 def parity_transform_vector(vector, basis, p):
 

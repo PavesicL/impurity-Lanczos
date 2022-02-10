@@ -11,8 +11,6 @@ if len(sys.argv)!=2:
 #start timer:
 start = time.time()
 
-
-
 inputFile = sys.argv[1]
 p=params(inputFile)
 
